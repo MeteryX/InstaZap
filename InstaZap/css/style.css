@@ -1,0 +1,108 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: #18191a;
+    /*Für den Fall, dass ein Background image genutzt wird siehe unten, falls nicht einfach löschen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+nav{
+    background-color: #262729;
+    box-shadow: 3px 3px 5px rgba(156, 35, 8, 0.8);
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding:  0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: orangered;
+}
+nav a:hover{
+    background-color: #18191a;
+}
+nav li:first-child{
+    font-size: 25px;
+    text-shadow: 3px 3px 4px #9c5008;
+    font-family: "Comic Sans MS", sans-serif;
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #262729;
+    box-shadow: -10px 1px 10px rgba(156, 35, 8, 0.8);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+
+
+.menu-button{
+    display: none;
+}
+
+.underline-hover-effect {
+    display: inline-block;
+    padding-bottom: 0.25rem; /* defines the space between text and underline */
+    position: relative;
+}
+
+.underline-hover-effect::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: orangered;
+    transition: width 0.25s ease-out;
+}
+.underline-hover-effect:hover::before {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+
+
+
+@media(max-width: 820px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
