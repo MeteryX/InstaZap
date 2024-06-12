@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0" charset="UTF-8">
+    <title>Private Anwendung</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" href="../icon/logo.png">
+</head>
+<body>
+<nav>
+    <ul class="sidebar">
+        <li onclick=hideSidebar() style= "border-style: none;" ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill=orangered><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li style="border-top-style: solid;"><a href="../MainPage.html">Startseite</a></li>
+        <li><a href="../LandingPage.html">Produkte</a></li>
+        <li><a href="../AboutUs.html">Über uns</a></li>
+        <li><a href="../Login.html">Login</a></li>
+    </ul>
+    <ul>
+        <!--<li><a href="#">InstaZap</a></li> -->
+        <li><img src="../../icon/logo.png" height="60px" width="60px"></li>
+        <li class="hideOnMobile underline-hover-effect"><a href="../MainPage.html">Startseite</a></li>
+        <li class="hideOnMobile underline-hover-effect"><a href="../LandingPage.html">Produkte</a></li>
+        <li class="hideOnMobile underline-hover-effect"><a href="../AboutUs.html">Über uns</a></li>
+        <li class="hideOnMobile underline-hover-effect"><a href="../Login.html">Login</a></li>
+        <li class="menu-button underline-hover-effect" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill=orangered><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+</nav>
+<main class="pmain">
+    <br>
+    <a href="../LandingPage.html">Zu den Produkten</a>
+    <div>
+        <div class="productsite">
+            <div class="row">
+                <div class="paragraph">
+                    <p class="hl">Luxuriöse Sauberkeit für anspruchsvolle Haushalte</p>
+                    <br>
+                    <p>
+                        Erleben Sie höchsten Komfort und makellose Sauberkeit in Ihrem Zuhause mit InstaZap, dem Laserreiniger der neuen Generation.
+                        Entwickelt für Menschen mit großen Häusern, die keine Putzkraft anstellen möchten,
+                        bietet InstaZap eine elegante Lösung für perfekte Sauberkeit.
+                    </p>
+                    <br><br>
+                    <p class="hl">Erstklassige Reinigungsergebnisse</p>
+                    <br>
+                    <p>
+                        InstaZap verwendet modernste Lasertechnologie,
+                        um jede Oberfläche in Ihrem Zuhause gründlich zu reinigen.
+                        Von Böden über Wände bis hin zu schwer zugänglichen Ecken –
+                        InstaZap sorgt für strahlende Sauberkeit ohne den Einsatz von chemischen Reinigungsmitteln.
+                        Die fortschrittliche Technologie entfernt Staub, Schmutz und sogar mikroskopisch kleine Partikel,
+                        die herkömmlichen Reinigungsmethoden entgehen.
+                    </p>
+                    <br><br>
+                    <p class="hl">Elegantes und diskretes Design</p>
+                    <br>
+                    <p>
+                        InstaZap fügt sich nahtlos in Ihre anspruchsvolle Wohnumgebung ein. Das stilvolle und diskrete Design des Geräts gewährleistet,
+                        dass es sich perfekt in Ihr Zuhause integriert, ohne den ästhetischen Gesamteindruck zu stören. Zudem arbeitet InstaZap äußerst leise,
+                        sodass Ihre Ruhe und Entspannung nicht beeinträchtigt werden.
+                    </p>
+                    <br><br>
+                    <p class="hl">Zeitsparend und effizient</p>
+                    <br>
+                    <p>
+                        Mit InstaZap sparen Sie wertvolle Zeit und Mühe. Das System ist einfach zu bedienen und kann programmiert werden,
+                        um Ihre Reinigungsanforderungen automatisch zu erfüllen.
+                        Egal ob Sie regelmäßig reinigen oder spezielle Aufgaben erledigen möchten –
+                        InstaZap passt sich flexibel Ihren Bedürfnissen an und sorgt dafür, dass Ihr Zuhause immer makellos sauber ist.
+                    </p>
+                    <br><br>
+                    <p class="hl">Komfort und Luxus vereint</p>
+                    <br>
+                    <p>
+                        InstaZap bietet eine unvergleichliche Kombination aus Komfort und Luxus.
+                        Genießen Sie die Freiheit, sich auf wichtigere Dinge zu konzentrieren,
+                        während InstaZap die Sauberkeit Ihres Zuhauses übernimmt.
+                        Erleben Sie, wie einfach und angenehm Haushaltspflege sein kann.
+                        <br><br>
+                        InstaZap – für ein Zuhause, das genauso anspruchsvoll ist wie Sie.
+                    </p>
+                    <br><br>
+
+
+                </div>
+                <div class="wrapper">
+                    <img src="../../img/richhouse.png" width="600" height="400" style="border: solid black;">
+                    <img src="../../img/villa2.png" width="600" height="400" style="border: solid black;">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div>
+
+    </div>
+
+
+
+</main>
+
+
+
+
+
+
+
+<footer>
+    <ul>
+        <li><a class="contact underline-hover-effect" href="../Contact.html">Kontakt</a></li>
+    </ul>
+</footer>
+
+
+
+
+
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    }
+</script>
+</body>
+</html>
