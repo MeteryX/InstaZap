@@ -25,9 +25,37 @@
         <li class="menu-button underline-hover-effect" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill=orangered><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
     </ul>
 </nav>
-<div class="main">
-    <p>Placeholder</p>
+<div class="bcontactbox">
+    <div class="login">
+        <h1>Login</h1>
+        <br>
+        <form onsubmit="event.preventDefault(); solve()">
+
+            <label for="username">
+                Username:
+            </label>
+            <div class="lrow"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5f6368"><path d="M680-360q-17 0-28.5-11.5T640-400v-160q0-17 11.5-28.5T680-600h120q17 0 28.5 11.5T840-560v40h-60v-20h-80v120h80v-20h60v40q0 17-11.5 28.5T800-360H680Zm-300 0v-240h160q17 0 28.5 11.5T580-560v40q0 17-11.5 28.5T540-480q17 0 28.5 11.5T580-440v40q0 17-11.5 28.5T540-360H380Zm60-150h80v-30h-80v30Zm0 90h80v-30h-80v30Zm-320 60v-200q0-17 11.5-28.5T160-600h120q17 0 28.5 11.5T320-560v200h-60v-60h-80v60h-60Zm60-120h80v-60h-80v60Z"/></svg>
+                <input type="text" id="username" name="username" placeholder=" Enter your Username">
+            </div>
+
+            <label for="password">
+                Passwort:
+            </label>
+            <div class="lrow">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5f6368"><path d="M280-400q-33 0-56.5-23.5T200-480q0-33 23.5-56.5T280-560q33 0 56.5 23.5T360-480q0 33-23.5 56.5T280-400Zm0 160q-100 0-170-70T40-480q0-100 70-170t170-70q67 0 121.5 33t86.5 87h352l120 120-180 180-80-60-80 60-85-60h-47q-32 54-86.5 87T280-240Zm0-80q56 0 98.5-34t56.5-86h125l58 41 82-61 71 55 75-75-40-40H435q-14-52-56.5-86T280-640q-66 0-113 47t-47 113q0 66 47 113t113 47Z"/></svg>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="wrap">
+                <button type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
 </div>
+
+
 
 <footer>
     <ul>
@@ -48,6 +76,28 @@
         const sidebar = document.querySelector('.sidebar')
         sidebar.style.display = 'none'
     }
+
+    function preventDefault(){
+        document.getElementById("submit").addEventListener("click", function (event) {
+            event.preventDefault()
+        })
+    }
+
+    function solve(){
+        var usernameInput = document.getElementById('username').value;
+        var passwordInput = document.getElementById('password').value;
+
+        const validUsername = 'CodersBay';
+        const validPassword = 'cbpw123';
+
+        if (usernameInput === validUsername && passwordInput === validPassword){
+            window.location.href = "./MainPage.html";
+        } else {
+            alert('Username oder Passwort falsch');
+        }
+    }
+
+
 </script>
 </body>
 </html>
